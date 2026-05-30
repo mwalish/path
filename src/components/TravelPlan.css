@@ -1,0 +1,218 @@
+/* =========================
+   TRAVEL PLAN PAGE STYLING
+========================= */
+
+#form-view {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80')
+                no-repeat center center/cover;
+    padding: 40px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+#form-view::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.35) 20%, rgba(0,0,0,0.88) 100%);
+    z-index: 1;
+}
+
+/* Ensure content is above overlay */
+#form-view > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.title {
+    font-family: 'Playfair Display', serif;
+    color: #FFD700;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.tag {
+    background: rgba(255,255,255,0.08);
+    color: #FFD700;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 12px 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(255, 215, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   STATUS MESSAGES
+========================= */
+
+.text-warning {
+    color: #FFD700;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.text-danger {
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 35px;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.service-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 32px;
+    padding: 2rem;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 215, 0, 0.08);
+    border-radius: 50%;
+    top: -40px;
+    right: -40px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+
+.service-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.service-card p {
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    font-size: 0.96rem;
+}
+
+/* Duration text */
+.service-card div {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.confirm-btn {
+    width: 100%;
+    margin-top: 1.8rem;
+    padding: 16px;
+    background: linear-gradient(to bottom, #FFCC00 0%, #B8860B 100%);
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    #form-view {
+        padding: 25px 18px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .icon {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 2.2rem;
+    }
+}

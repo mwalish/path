@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- NEW: Background Container for Auth/Pathfinder --- */
+.hero-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Service Grid & Card Styles --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #FFD700; 
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.service-card .icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
+}
+
+.service-card h3 { 
+    color: #FFD700; 
+    font-size: 1.1rem; 
+    margin-bottom: 8px; 
+}
+
+/* --- Form & Navigation Elements --- */
+#form-view {
+    width: 100%;
+    animation: fadeIn 0.5s ease;
+}
+
+.tag { 
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid #FFD700; 
+    color: #FFD700; 
+    padding: 10px 20px; 
+    border-radius: 100px; 
+    font-size: 0.8rem; 
+    cursor: pointer; 
+    transition: 0.4s; 
+}
+
+.tag:hover { 
+    background: rgba(255, 215, 0, 0.1); 
+    color: #fff; 
+}
+
+/* --- Hotel & Car Selection Grid --- */
+.hotel-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    max-height: 450px; 
+    overflow-y: auto;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .hotel-selection-grid { grid-template-columns: 1fr; }
+}

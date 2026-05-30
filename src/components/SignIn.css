@@ -1,0 +1,150 @@
+.signin-container {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80") 
+                no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.signin-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.9) 100%);
+    z-index: 1;
+}
+
+.glass-card.signin-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    padding: 3.5rem 3rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.signin-header {
+    margin-bottom: 2.5rem;
+}
+
+.signin-header .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.signin-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.signin-header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.05rem;
+}
+
+.input-group {
+    margin-bottom: 1.8rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #FFD700;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.success-message {
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.signin-footer {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+.gold-link {
+    color: #FFD700;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gold-link:hover {
+    text-decoration: underline;
+}
+
+/* Reuse your confirm button style */
+.confirm-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 16px;
+    background: linear-gradient(to bottom, #FFCC00 0%, #B8860B 100%);
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.confirm-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
