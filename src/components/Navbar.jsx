@@ -18,7 +18,7 @@ const Navbar = () => {
         <a href="/HotelBooking" className="nav-auth-btn">Hotel Booking</a>
         <a href="/bookcar" className="nav-auth-btn">Car Rental</a>
         <a href="/TourActivity" className="nav-auth-btn">TourActivity</a>
-        <a href="/TourActivity" className="nav-auth-btn">TourActivity</a>
+        {/* <a href="/TourActivity" className="nav-auth-btn">TourActivity</a> */}
         {/* <a href="/chatbot" className="nav-auth-btn">chatbot</a> */}
         <a href="/auth" className="nav-auth-btn">Log out</a>
         
