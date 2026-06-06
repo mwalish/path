@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const TravelStyle = () => {
   const [loading, setLoading] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [allProducts, setAllProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
